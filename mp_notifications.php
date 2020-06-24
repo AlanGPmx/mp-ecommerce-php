@@ -6,11 +6,10 @@ foreach ($_GET as $key => $value) {
 }
 
 $myfile = fopen("test.txt", "a");
-fwrite($myfile, "******************************************************************");
-fwrite($myfile, "*** \t\t" . date('m/d/Y h:i:s a', time()));
-fwrite($myfile, "*** \t\t" . $response);
-fwrite($myfile, file_get_contents("php://input"));
-fwrite($myfile, "******************************************************************");
+fwrite($myfile, "******************************************************************\n");
+fwrite($myfile, "* " . $response . "\n");
+fwrite($myfile, file_get_contents("php://input")) . "\n";
+fwrite($myfile, "\n\n");
 fclose($myfile);
 
 
