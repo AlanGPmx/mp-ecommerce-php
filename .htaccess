@@ -1,0 +1,25 @@
+#Forzar a que todas las URL sean seguras con HTTPS
+RewriteEngine on
+RewriteCond %{HTTPS} !on
+RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI}
+
+#Evita que se vean los archivos de las carpetas donde no exista un documento index
+Options All -Indexes
+
+#Eliminar extensión .php y .html
+<IfModule mod_rewrite.c>
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule ^(.*)$ $1.php
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^(.*)$ $1.html
+</IfModule>
+
+#Asegurar el archivo .htaccess
+<Files .htaccess>
+order allow,deny
+deny from all
+</Files>

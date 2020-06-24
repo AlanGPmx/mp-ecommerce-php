@@ -3,19 +3,31 @@ error_reporting(E_ALL);
 ini_set('display_errors', '1');
 
 require  'vendor/autoload.php';
-MercadoPago\SDK::setAccessToken("APP_USR-6718728269189792-112017-dc8b338195215145a4ec035fdde5cedf-491494389"); // On Sandbox
+MercadoPago\SDK::setAccessToken("APP_USR-5b9a3e27-3852-407d-8f49-e08bd5990007"); // On Sandbox
+MercadoPago\SDK::setIntegratorId("​dev_24c65fb163bf11ea96500242ac130004");
+
+if (isset($_POST['title']) && isset($_POST['unit'])  && isset($_POST['price']) && $_POST['title'] != "" && $_POST['unit'] != "" && $_POST['price'] != "") {
 
 
-// Crea un objeto de preferencia
-$preference = new MercadoPago\Preference();
+    // Crea un objeto de preferencia
+    $preference = new MercadoPago\Preference();
 
-// Crea un ítem en la preferencia
-$item = new MercadoPago\Item();
-$item->title = $_POST['title'];
-$item->quantity = $_POST['unit'];
-$item->unit_price = $_POST['price'];
-$preference->items = array($item);
-$preference->save();
+    // Crea un ítem en la preferencia
+    $item = new MercadoPago\Item();
+    $item->title = $_POST['title'];
+    $item->quantity = $_POST['unit'];
+    $item->unit_price = $_POST['price'];
+    $preference->items = array($item);
+    $preference->back_urls = array(
+        "success" => "https://www.tu-sitio/success",
+        "failure" => "http://www.tu-sitio/failure",
+        "pending" => "http://www.tu-sitio/pending"
+    );
+    $preference->save();
+} else {
+
+    header('Location: ./');
+}
 
 ?>
 
@@ -562,7 +574,6 @@ $preference->save();
                                             <?php echo $_POST['unit'] ?>
                                         </h3>
                                     </div>
-                                    <button type="submit" class="mercadopago-button" formmethod="post">Pagar 1</button>
                                     <form action="/procesar-pago" method="POST">
                                         <script src="https://www.mercadopago.com.mx/integrations/v1/web-payment-checkout.js" data-preference-id="<?php echo $preference->id; ?>">
                                         </script>
@@ -603,6 +614,10 @@ $preference->save();
             <circle class="mp-spinner-path" cx="50" cy="50" r="20" fill="none" stroke-miterlimit="10"></circle>
         </svg> </div>
     <div id="ac-gn-viewport-emitter"> </div>
+
+    <script src="https://secure.mlstatic.com/sdk/javascript/v1/mercadopago.js"></script>
+
+
 </body>
 
 </html>
