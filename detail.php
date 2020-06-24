@@ -35,9 +35,6 @@ if (isset($_POST['title']) && isset($_POST['unit'])  && isset($_POST['price']) &
     $preference->marketplace = "Tienda e-commerce";
     $preference->save();
 
-    echo "<pre>";
-    print_r($preference);
-    echo "</pre>";
 } else {
 
     header('Location: ./');
