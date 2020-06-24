@@ -44,7 +44,7 @@ $payer->surname = "Landa";
 $payer->email = "test_user_58295862@testuser.com";
 $payer->phone = array(
     "area_code" => "52",
-    "number" => "​5549737300"
+    "number" => "​55 4973 7300"
 );
 $payer->address = array(
     "street_name" => "Insurgentes Sur",
