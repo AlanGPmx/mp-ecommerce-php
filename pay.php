@@ -19,11 +19,11 @@ MercadoPago\SDK::setIntegratorId($integrator_id);
 $preference = new MercadoPago\Preference();
 
 $preference->back_urls = array(
-    "success" => $url."/mp_notifications.php",
+    "success" => $url."/pago-aprobado.php",
     "failure" => $url."/pago-rechazado.php",
     "pending" => $url."/pago-pendiente.php"
 );
-$preference->auto_return = $url."/mp_notifications.php";
+$preference->auto_return = "approved";
 $preference->external_reference = 'alansgp@outlook.com';
 $preference->notification_url = $url.'/mp_notifications.php';
 $preference->payment_methods = array(
