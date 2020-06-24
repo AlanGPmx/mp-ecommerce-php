@@ -3,16 +3,19 @@ require 'vendor/autoload.php';
 
 $url = 'https://alangpmx-mp-ecommerce-php.herokuapp.com';
 
-MercadoPago\SDK::setAccessToken('APP_USR-6317427424180639-042414-47e969706991d3a442922b0702a0da44-469485398');
+//MercadoPago\SDK::setAccessToken('APP_USR-6317427424180639-042414-47e969706991d3a442922b0702a0da44-469485398');
+//MercadoPago\SDK::setIntegratorId("dev_24c65fb163bf11ea96500242ac130004");
+
+MercadoPago\SDK::setAccessToken('APP_USR-6718728269189792-112017-dc8b338195215145a4ec035fdde5cedf-491494389');
 MercadoPago\SDK::setIntegratorId("dev_24c65fb163bf11ea96500242ac130004");
 
 /* Armo preferencia de pago */
 $preference = new MercadoPago\Preference();
 
 $preference->back_urls = array(
-    "success" => $url."pago-aprobado.php",
-    "failure" => $url."pago-rechazado.php",
-    "pending" => $url."pago-pendiente.php"
+    "success" => $url."/pago-aprobado.php",
+    "failure" => $url."/pago-rechazado.php",
+    "pending" => $url."/pago-pendiente.php"
 );
 $preference->auto_return = "approved";
 $preference->external_reference = 'leo.j.diaz@gmail.com';
