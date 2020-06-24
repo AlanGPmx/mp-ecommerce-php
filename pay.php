@@ -12,8 +12,8 @@ $url = 'https://alangpmx-mp-ecommerce-php.herokuapp.com';
 MercadoPago\SDK::initialize(); 
 MercadoPago\SDK::setAccessToken($access_token);
 MercadoPago\SDK::setIntegratorId($integrator_id);
-//MercadoPago\SDK::setPublicKey($public_key);
-//MercadoPago\SDK::setClientId($clientID);
+MercadoPago\SDK::setPublicKey($public_key);
+MercadoPago\SDK::setClientId($clientID);
 
 /* Armo preferencia de pago */
 $preference = new MercadoPago\Preference();
