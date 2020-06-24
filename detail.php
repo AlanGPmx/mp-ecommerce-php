@@ -3,9 +3,9 @@ error_reporting(E_ALL);
 ini_set('display_errors', '1');
 require 'vendor/autoload.php';
 
-$access_token = 'APP_USR-6533535571150680-062402-ec45f8f8bf0d47b1717a596e468fbc37-214665121';//'APP_USR-6718728269189792-112017-dc8b338195215145a4ec035fdde5cedf-491494389';
+$access_token = 'TEST-6533535571150680-062402-700f317dccd9772b2d2bbfb7365cee5d-214665121';//'APP_USR-6718728269189792-112017-dc8b338195215145a4ec035fdde5cedf-491494389';
 $integrator_id = '​dev_24c65fb163bf11ea96500242ac130004';
-$public_key = 'APP_USR-8ff6caaf-b0d3-41d2-8323-f1cd70150643';//'APP_USR-5b9a3e27-3852-407d-8f49-e08bd5990007';
+$public_key = 'TEST-87812054-7335-4429-8c1a-f51d1c167272';//'APP_USR-5b9a3e27-3852-407d-8f49-e08bd5990007';
 $clientID = '6533535571150680';//'491494389';
 $host = 'https://alangpmx-mp-ecommerce-php.herokuapp.com';
 
