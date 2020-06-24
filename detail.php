@@ -30,7 +30,12 @@ if (isset($_POST['title']) && isset($_POST['unit'])  && isset($_POST['price']) &
     $item->unit_price = $_POST['price'];
     $item->description = "Telefono Celular";
 
-    $preference->auto_return = $host."/Procesado";
+    $preference->back_urls = array(
+        "success" => $host."/success",
+        "failure" => $host."/failure",
+        "pending" => $host."/pending"
+    );
+    $preference->auto_return = "approved";
     $preference->items = array($item);
     $preference->marketplace = "Tienda e-commerce";
     $preference->save();
