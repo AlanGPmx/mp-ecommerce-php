@@ -38,18 +38,18 @@ $preference->payment_methods = array(
 
 /* ARMO PERFIL DE COMPRADOR */
 $payer = new MercadoPago\Payer();
-//$payer->id = 535650015;
+$payer->id = 535650015;
 $payer->name = "Lalo";
 $payer->surname = "Landa";
 $payer->email = "test_user_58295862@testuser.com";
 $payer->phone = array(
-    "area_code" => "",
-    "number" => "​55 4973 7300"
+    "area_code" => "52",
+    "number" => "​5549737300",
 );
 $payer->address = array(
     "street_name" => "Insurgentes Sur",
     "street_number" => 1602,
-    "zip_code" => "03940"
+    "zip_code" => "03940",
 );
 $preference->payer = $payer;
 
@@ -61,7 +61,7 @@ $item->title = $_POST['title'];
 $item->description = 'Dispositivo móvil de Tienda e-commerce';
 $item->quantity = 1;
 $item->unit_price = $_POST['price'];
-$item->picture_url = $url.str_replace("./","",$_POST['img']);
+$item->picture_url = $url."/".str_replace("./","",$_POST['img']);
 
 $preference->items = array($item);
 
