@@ -5,8 +5,12 @@ foreach ($_GET as $key => $value) {
     $response .= htmlspecialchars($key)."=".htmlspecialchars($value)."&";
 }
 
-$myfile = fopen("webhooks_output.txt", "a");
-fwrite($myfile, date('m/d/Y h:i:s a', time()) . " " . $response . "|||" . file_get_contents("php://input"));
+$myfile = fopen("test.txt", "a");
+fwrite($myfile, "******************************************************************");
+fwrite($myfile, "*** \t\t" . date('m/d/Y h:i:s a', time()));
+fwrite($myfile, "*** \t\t" . $response);
+fwrite($myfile, file_get_contents("php://input"));
+fwrite($myfile, "******************************************************************");
 fclose($myfile);
 
 
