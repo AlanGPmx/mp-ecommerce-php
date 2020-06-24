@@ -3,10 +3,11 @@ error_reporting(E_ALL);
 ini_set('display_errors', '1');
 require 'vendor/autoload.php';
 
-$access_token = 'TEST-6533535571150680-062402-700f317dccd9772b2d2bbfb7365cee5d-214665121';//'APP_USR-6718728269189792-112017-dc8b338195215145a4ec035fdde5cedf-491494389';
+$access_token = 'APP_USR-6718728269189792-112017-dc8b338195215145a4ec035fdde5cedf-491494389';
 $integrator_id = '​dev_24c65fb163bf11ea96500242ac130004';
-$public_key = 'TEST-87812054-7335-4429-8c1a-f51d1c167272';//'APP_USR-5b9a3e27-3852-407d-8f49-e08bd5990007';
-$clientID = '6533535571150680';//'491494389';
+$public_key = 'APP_USR-5b9a3e27-3852-407d-8f49-e08bd5990007';
+$clientID = '491494389';
+$client_secret = 'CERCNwgAgUAcZYj2LkN3NKQNXrSGJVVn';
 $host = 'https://alangpmx-mp-ecommerce-php.herokuapp.com';
 
 MercadoPago\SDK::initialize();
@@ -16,6 +17,7 @@ MercadoPago\SDK::setAccessToken($access_token);
 MercadoPago\SDK::setIntegratorId($integrator_id);
 MercadoPago\SDK::setPublicKey($public_key);
 MercadoPago\SDK::setClientId($clientID);
+MercadoPago\SDK::setClientSecret($client_secret);
 
 if (isset($_POST['title']) && isset($_POST['unit'])  && isset($_POST['price']) && $_POST['title'] != "" && $_POST['unit'] != "" && $_POST['price'] != "") {
 
@@ -593,7 +595,7 @@ if (isset($_POST['title']) && isset($_POST['unit'])  && isset($_POST['price']) &
                                             <?php echo $_POST['unit'] ?>
                                         </h3>
                                     </div>
-                                    <form action="/procesar-pago" method="POST">
+                                    <form method="POST">
                                         <script src="https://www.mercadopago.com.mx/integrations/v1/web-payment-checkout.js" data-preference-id="<?php echo $preference->id; ?>">
                                         </script>
                                     </form>
