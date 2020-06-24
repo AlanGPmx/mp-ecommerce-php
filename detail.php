@@ -61,6 +61,7 @@ if (isset($_POST['title']) && isset($_POST['unit'])  && isset($_POST['price']) &
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 
+    <script src="https://www.mercadopago.com/v2/security.js" view="home"></script>
     <script src="https://secure.mlstatic.com/sdk/javascript/v1/mercadopago.js"></script>
 
     <link rel="stylesheet" href="assets/category-landing.css" media="screen, print">
@@ -596,7 +597,9 @@ if (isset($_POST['title']) && isset($_POST['unit'])  && isset($_POST['price']) &
                                         <script src="https://www.mercadopago.com.mx/integrations/v1/web-payment-checkout.js" data-preference-id="<?php echo $preference->id; ?>">
                                         </script>
                                     </form>
-                                    <!-- https://www.mercadopago.com.mx/checkout/v1/redirect/6c8b8cf7-4ea9-4018-b63c-c2cf7e84145f/fatal/?preference-id=491494389-60e8484c-923b-4439-bdda-e891fe65fe85&action=https%3A%2F%2Falangpmx-mp-ecommerce-php.herokuapp.com%2Fprocesar-pago&p=2b4259117d70a7df40eef90bfd23e8d0 -->
+                                    <!-- https://www.mercadopago.com.mx/checkout/v1/redirect/6c8b8cf7-4ea9-4018-b63c-c2cf7e84145f/fatal/?preference-id=491494389-60e8484c-923b-4439-bdda-e891fe65fe85&action=https%3A%2F%2Falangpmx-mp-ecommerce-php.herokuapp.com%2Fprocesar-pago&p=2b4259117d70a7df40eef90bfd23e8d0 
+                                
+                                    https://www.mercadopago.com.mx/checkout/v1/redirect/c1ba3caf-0257-47d9-a341-c6d869af781a/fatal/?preference-id=491494389-111aef52-fe8a-4e60-8573-5700e93fa0e0&action=https%3A%2F%2Falangpmx-mp-ecommerce-php.herokuapp.com%2Fprocesar-pago&p=2b4259117d70a7df40eef90bfd23e8d0-->
                                     <br><br>
                                 </div>
                             </div>
