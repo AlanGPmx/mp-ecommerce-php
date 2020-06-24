@@ -1,29 +1,43 @@
 <?php
 error_reporting(E_ALL);
 ini_set('display_errors', '1');
+require 'vendor/autoload.php';
 
-require  'vendor/autoload.php';
-MercadoPago\SDK::setAccessToken("APP_USR-5b9a3e27-3852-407d-8f49-e08bd5990007"); // On Sandbox
-MercadoPago\SDK::setIntegratorId("​dev_24c65fb163bf11ea96500242ac130004");
+$access_token = 'APP_USR-6718728269189792-112017-dc8b338195215145a4ec035fdde5cedf-491494389';
+$integrator_id = '​dev_24c65fb163bf11ea96500242ac130004';
+$public_key = 'APP_USR-5b9a3e27-3852-407d-8f49-e08bd5990007';
+$clientID = '491494389';
+$host = 'https://localhost/mp-ecommerce-php/mp-ecommerce-php/';
+
+MercadoPago\SDK::initialize();
+
+
+MercadoPago\SDK::setAccessToken($access_token);
+MercadoPago\SDK::setIntegratorId($integrator_id);
+MercadoPago\SDK::setPublicKey($public_key);
+MercadoPago\SDK::setClientId($clientID);
 
 if (isset($_POST['title']) && isset($_POST['unit'])  && isset($_POST['price']) && $_POST['title'] != "" && $_POST['unit'] != "" && $_POST['price'] != "") {
-
 
     // Crea un objeto de preferencia
     $preference = new MercadoPago\Preference();
 
     // Crea un ítem en la preferencia
     $item = new MercadoPago\Item();
+    $item->id = "1234";
     $item->title = $_POST['title'];
     $item->quantity = $_POST['unit'];
     $item->unit_price = $_POST['price'];
+    $item->description = "Telefono Celular";
+
+
     $preference->items = array($item);
-    $preference->back_urls = array(
-        "success" => "https://www.tu-sitio/success",
-        "failure" => "http://www.tu-sitio/failure",
-        "pending" => "http://www.tu-sitio/pending"
-    );
+    $preference->marketplace = "Tienda e-commerce";
     $preference->save();
+
+    echo "<pre>";
+    print_r($preference);
+    echo "</pre>";
 } else {
 
     header('Location: ./');
@@ -45,13 +59,14 @@ if (isset($_POST['title']) && isset($_POST['unit'])  && isset($_POST['price']) &
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 
-    <link rel="stylesheet" href="./assets/category-landing.css" media="screen, print">
+    <script src="https://secure.mlstatic.com/sdk/javascript/v1/mercadopago.js"></script>
 
-    <link rel="stylesheet" href="./assets/category.css" media="screen, print">
+    <link rel="stylesheet" href="assets/category-landing.css" media="screen, print">
 
-    <link rel="stylesheet" href="./assets/merch-tools.css" media="screen, print">
+    <link rel="stylesheet" href="assets/category.css" media="screen, print">
 
-    <link rel="stylesheet" href="./assets/fonts" media="">
+    <link rel="stylesheet" href="assets/merch-tools.css" media="screen, print">
+
     <style>
         .as-filter-button-text {
             font-size: 26px;
@@ -496,7 +511,8 @@ if (isset($_POST['title']) && isset($_POST['unit'])  && isset($_POST['price']) &
                         <div class="pd-billboard pd-category-header">
                             <div class="pd-l-plate-scale">
                                 <div class="pd-billboard-background">
-                                    <img src="./assets/music-audio-alp-201709" alt="" width="1440" height="320" data-scale-params-2="wid=2880&amp;hei=640&amp;fmt=jpeg&amp;qlt=95&amp;op_usm=0.5,0.5&amp;.v=1503948581306" class="pd-billboard-hero ir">
+                                    <!-- <img src="assets/music-audio-alp-201709" alt="" width="1440" height="320" data-scale-params-2="wid=2880&amp;hei=640&amp;fmt=jpeg&amp;qlt=95&amp;op_usm=0.5,0.5&amp;.v=1503948581306" class="pd-billboard-hero ir">
+                                -->
                                 </div>
                                 <div class="pd-billboard-info">
                                     <h1 class="pd-billboard-header pd-util-compact-small-18">Tienda e-commerce</h1>
@@ -535,7 +551,7 @@ if (isset($_POST['title']) && isset($_POST['unit'])  && isset($_POST['price']) &
                                 <div class="as-producttile-tilehero with-paddlenav " style="float:left;">
                                     <div class="as-dummy-container as-dummy-img">
 
-                                        <img src="./assets/wireless-headphones" class="ir ir item-image as-producttile-image  " style="max-width: 70%;max-height: 70%;" alt="" width="445" height="445">
+                                        <img src="assets/wireless-headphones" class="ir ir item-image as-producttile-image  " style="max-width: 70%;max-height: 70%;" alt="" width="445" height="445">
                                     </div>
                                     <div class="images mini-gallery gal5 ">
 
@@ -544,7 +560,7 @@ if (isset($_POST['title']) && isset($_POST['unit'])  && isset($_POST['price']) &
                                             <div class="clearfix image-list xs-no-js as-util-relatedlink relatedlink" data-relatedlink="6|Powerbeats3 Wireless Earphones - Neighborhood Collection - Brick Red|MPXP2">
                                                 <div class="as-tilegallery-element as-image-selected">
                                                     <div class=""></div>
-                                                    <img src="./assets/003.jpg" class="ir ir item-image as-producttile-image" alt="" width="445" height="445" style="content:-webkit-image-set(url(<?php echo $_POST['img'] ?>) 2x);">
+                                                    <img src="assets/003.jpg" class="ir ir item-image as-producttile-image" alt="" width="445" height="445" style="content:-webkit-image-set(url(<?php echo $_POST['img'] ?>) 2x);">
                                                 </div>
 
                                             </div>
@@ -578,6 +594,8 @@ if (isset($_POST['title']) && isset($_POST['unit'])  && isset($_POST['price']) &
                                         <script src="https://www.mercadopago.com.mx/integrations/v1/web-payment-checkout.js" data-preference-id="<?php echo $preference->id; ?>">
                                         </script>
                                     </form>
+                                    <?php echo $preference->id; ?>
+                                    <br><br>
                                 </div>
                             </div>
                         </div>
@@ -614,9 +632,6 @@ if (isset($_POST['title']) && isset($_POST['unit'])  && isset($_POST['price']) &
             <circle class="mp-spinner-path" cx="50" cy="50" r="20" fill="none" stroke-miterlimit="10"></circle>
         </svg> </div>
     <div id="ac-gn-viewport-emitter"> </div>
-
-    <script src="https://secure.mlstatic.com/sdk/javascript/v1/mercadopago.js"></script>
-
 
 </body>
 
