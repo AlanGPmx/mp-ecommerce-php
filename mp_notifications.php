@@ -16,7 +16,7 @@ fclose($myfile);
 
 if ($_GET["topic"] == 'payment'){
 
-	$curl = "curl -X GET 'https://api.mercadopago.com/v1/payments/".$_GET["id"]."?access_token=APP_USR-6317427424180639-042414-47e969706991d3a442922b0702a0da44-469485398'";
+	$curl = "curl -X GET 'https://api.mercadopago.com/v1/payments/".$_GET["id"]."?access_token=APP_USR-8058997674329963-062418-89271e2424bb1955bc05b1d7dd0977a8-592190948'";
   
 	$output = shell_exec($curl); 
 
