@@ -9,8 +9,6 @@ $public_key = 'APP_USR-5b9a3e27-3852-407d-8f49-e08bd5990007';
 $clientID = '491494389';
 $url = 'https://alangpmx-mp-ecommerce-php.herokuapp.com';
 
-//APP_USR-6588866596068053-041607-428a530760073a99a1f2d19b0812a5b6-491494389
-
 MercadoPago\SDK::initialize(); 
 MercadoPago\SDK::setAccessToken($access_token);
 MercadoPago\SDK::setIntegratorId($integrator_id);
@@ -69,3 +67,4 @@ $preference->items = array($item);
 
 $preference->save();
 ?>
+

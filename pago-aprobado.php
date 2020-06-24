@@ -92,6 +92,7 @@
                                 <li>Id del pago: <?php echo $_GET['collection_id'] ?></li>
                                 <li>Referencia: <?php echo $_GET['external_reference'] ?></li>
                                 <li>Método de pago: <?php echo $_GET['payment_type'] ?></li>
+                                <li>Preference ID: <?php echo $_GET['preference_id'] ?></li>
                             </ul>
                         </div>
                     </div>
