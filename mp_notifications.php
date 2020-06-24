@@ -1,4 +1,5 @@
 <?php
+$file = fopen("test.txt","a");
 fwrite($file,"-------------------------------------------- \r\n");
 /*header("HTTP/1.1 200 OK");
 echo file_get_contents('php://input');
