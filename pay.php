@@ -4,8 +4,6 @@ ini_set('display_errors', '1');
 require 'vendor/autoload.php';
 
 $access_token = 'APP_USR-8058997674329963-062418-89271e2424bb1955bc05b1d7dd0977a8-592190948';
-//'APP_USR-6588866596068053-041607-428a530760073a99a1f2d19b0812a5b6-491494389'; 
-//              'APP_USR-8058997674329963-062418-89271e2424bb1955bc05b1d7dd0977a8-592190948'; 
 $integrator_id = '​dev_24c65fb163bf11ea96500242ac130004';
 $public_key = 'APP_USR-158fff95-0bdf-4149-9abc-c8b0ac7f289f';
 $clientID = '592190948';
