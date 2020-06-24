@@ -1,12 +1,10 @@
 <?php
 
-$TextoPeticionesGoogle = "test.txt";
-//Obtiene el ultimo digito de peticiones totales
-$myfile = fopen($TextoPeticionesGoogle, "a+") or die("Unable to open file!");
-//Aumenta en uno la nueva peticion ya teniendo guardada el ultimo estado de peticiones totales
-$new = intval(fgets($myfile)) + 1;
+$fileObt = "test.txt";
+$myfile = fopen($fileObt, "a") or die("Unable to open file!");
 //Cierra el archivo
 fclose($myfile);
+$new = json_decode(file_get_contents('php://input'), true);
 //Escribe el numero total de peticiones nuevo aumentado ya en uno
 fwrite($myfile, $new);
 
