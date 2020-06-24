@@ -25,7 +25,7 @@ $preference->back_urls = array(
 );
 $preference->auto_return = "approved";
 $preference->external_reference = 'alansgp@outlook.com';
-$preference->notification_url = $url.'/mp_notifications.php';
+$preference->notification_url = 'https://kolkrabbi.heroku.com/hooks/github';//$url.'/mp_notifications.php';
 $preference->payment_methods = array(
     "excluded_payment_methods" => array(
         array("id" => "amex")
