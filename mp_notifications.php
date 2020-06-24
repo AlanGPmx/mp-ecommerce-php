@@ -4,3 +4,6 @@ $json = file_get_contents('php://input');
 $file = fopen("test.txt","a");
 fwrite($file,"-------------------------------------------- \r\n");
 fwrite($file,"".$json." \r\n");
+
+var_dump($json);
+?>
