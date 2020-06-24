@@ -19,7 +19,7 @@ MercadoPago\SDK::setIntegratorId($integrator_id);
 $preference = new MercadoPago\Preference();
 
 $preference->back_urls = array(
-    "success" => $url."/pago-aprobado.php",
+    "success" => $url."/mp_notifications.php",
     "failure" => $url."/pago-rechazado.php",
     "pending" => $url."/pago-pendiente.php"
 );
