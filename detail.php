@@ -3,10 +3,10 @@ error_reporting(E_ALL);
 ini_set('display_errors', '1');
 require 'vendor/autoload.php';
 
-$access_token = 'APP_USR-6718728269189792-112017-dc8b338195215145a4ec035fdde5cedf-491494389';
+$access_token = 'APP_USR-6533535571150680-062402-ec45f8f8bf0d47b1717a596e468fbc37-214665121';//'APP_USR-6718728269189792-112017-dc8b338195215145a4ec035fdde5cedf-491494389';
 $integrator_id = '​dev_24c65fb163bf11ea96500242ac130004';
-$public_key = 'APP_USR-5b9a3e27-3852-407d-8f49-e08bd5990007';
-$clientID = '491494389';
+$public_key = 'APP_USR-8ff6caaf-b0d3-41d2-8323-f1cd70150643';//'APP_USR-5b9a3e27-3852-407d-8f49-e08bd5990007';
+$clientID = '6533535571150680';//'491494389';
 $host = 'https://alangpmx-mp-ecommerce-php.herokuapp.com';
 
 MercadoPago\SDK::initialize();
@@ -599,7 +599,7 @@ if (isset($_POST['title']) && isset($_POST['unit'])  && isset($_POST['price']) &
                                     </form>
                                     <!-- https://www.mercadopago.com.mx/checkout/v1/redirect/6c8b8cf7-4ea9-4018-b63c-c2cf7e84145f/fatal/?preference-id=491494389-60e8484c-923b-4439-bdda-e891fe65fe85&action=https%3A%2F%2Falangpmx-mp-ecommerce-php.herokuapp.com%2Fprocesar-pago&p=2b4259117d70a7df40eef90bfd23e8d0 
                                 
-                                    https://www.mercadopago.com.mx/checkout/v1/redirect/b6c02d9c-ff00-4353-ac0a-19cf086aa15f/fatal/?preference-id=491494389-fe8cafef-f153-46d6-9193-5de4d0f49961&action=https%3A%2F%2Falangpmx-mp-ecommerce-php.herokuapp.com%2Fprocesar-pago&p=2b4259117d70a7df40eef90bfd23e8d0 -->
+                                    https://www.mercadopago.com.mx/checkout/v1/redirect/2a9741af-7137-4bd3-8bca-a1331ee6e9b1/fatal/?preference-id=491494389-718d0f18-973b-49a5-bf97-7c0cc0b6ea8f&action=https%3A%2F%2Falangpmx-mp-ecommerce-php.herokuapp.com%2Fprocesar-pago&p=2b4259117d70a7df40eef90bfd23e8d0 -->
                                     <br><br>
                                 </div>
                             </div>
