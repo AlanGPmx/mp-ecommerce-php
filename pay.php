@@ -3,10 +3,12 @@ error_reporting(E_ALL);
 ini_set('display_errors', '1');
 require 'vendor/autoload.php';
 
-$access_token = 'APP_USR-6588866596068053-041607-428a530760073a99a1f2d19b0812a5b6-491494389'; //'APP_USR-6718728269189792-112017-dc8b338195215145a4ec035fdde5cedf-491494389'; 
+$access_token = 'APP_USR-8058997674329963-062418-89271e2424bb1955bc05b1d7dd0977a8-592190948';
+//'APP_USR-6588866596068053-041607-428a530760073a99a1f2d19b0812a5b6-491494389'; 
+//              'APP_USR-8058997674329963-062418-89271e2424bb1955bc05b1d7dd0977a8-592190948'; 
 $integrator_id = '​dev_24c65fb163bf11ea96500242ac130004';
-$public_key = 'APP_USR-5b9a3e27-3852-407d-8f49-e08bd5990007';
-$clientID = '491494389';
+$public_key = 'APP_USR-158fff95-0bdf-4149-9abc-c8b0ac7f289f';
+$clientID = '592190948';
 $url = 'https://alangpmx-mp-ecommerce-php.herokuapp.com';
 
 MercadoPago\SDK::initialize(); 
