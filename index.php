@@ -1,3 +1,8 @@
+<?php
+require __DIR__  . '/vendor/autoload.php';
+MercadoPago\SDK::setAccessToken("APP_USR-6718728269189792-112017-dc8b338195215145a4ec035fdde5cedf-491494389"); // On Sandbox
+?>
+
 <!DOCTYPE html>
 <html class="supports-animation supports-columns svg no-touch no-ie no-oldie no-ios supports-backdrop-filter as-mouseuser" lang="en-US"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     
@@ -104,7 +109,7 @@
                                                         </span>
                                                     </button>
                                                 </div>
-                                                <materializer data-uid="as-accordion-id0" id="as-accordion-id0" data-show-height="computed" data-hide-height="0" class="as-search-facet-materializer ase-materializer ase-materializer-show" data-shown-init="true" style="">
+                                                <materializer data-uid="as-accordion-id0" id="as-accordion-id0" data-show-height="computed" data-hide-height="0" class="as-search-facet-materializer ase-materializer ase-materializer-show" data-shown-init="true">
                                                     <div class="as-accordion-content">
                                                         <ul class="as-search-filter-items  as-filter-text-type    ">
                                                             <li class="as-filter-item       ">
@@ -235,7 +240,7 @@
                                                 <div class="clearfix image-list xs-no-js as-util-relatedlink relatedlink" data-relatedlink="2|Beats Studio3 Wireless Over‑Ear Headphones - Shadow Gray|MQUF2">
                                                     <div class="as-tilegallery-element as-image-selected">
                                                         <div class=""></div>
-                                                        <img src="./assets/samsung-galaxy-s9-xxl.jpg" class="ir ir item-image as-producttile-image" alt="" data-desc="Samsung galaxy" style="content:-webkit-image-set(url(https://md6.pricebaba.com/images/product/mobile/46638/samsung-galaxy-s9-xxl.jpg">
+                                                        <img src="./assets/samsung-galaxy-s9-xxl.jpg" class="ir ir item-image as-producttile-image" alt="" data-desc="Samsung galaxy" style="content:-webkit-image-set(url(https://md6.pricebaba.com/images/product/mobile/46638/samsung-galaxy-s9-xxl.jpg))">
                                                     </div>
                                                     
                                                 </div>
@@ -243,7 +248,7 @@
                                         </div>
 
                                     </div>
-                                    <div class="as-producttile-info" style="min-height: 168px;">
+                                    <div class="as-producttile-info" style="min-height: 168px">
                                         <div class="as-producttile-titlepricewraper" style="min-height: 128px;">
                                             <div class="as-producttile-title">
                                                 <h3 class="as-producttile-name">
@@ -278,7 +283,7 @@
                                                 <div class="clearfix image-list xs-no-js as-util-relatedlink relatedlink" data-relatedlink="3|BeatsX Earphones - UNDEFEATED Limited Edition - Camo|MQD92">
                                                     <div class="as-tilegallery-element as-image-selected">
                                                         <div class=""></div>
-                                                        <img src="./assets/l6g6.jpg" class="ir ir item-image as-producttile-image" alt="" width="445" height="445" data-desc="LG G6" style="">
+                                                        <img src="./assets/l6g6.jpg" class="ir ir item-image as-producttile-image" alt="" width="445" height="445" data-desc="LG G6">
                                                     </div>
                                                     
                                                 </div>
