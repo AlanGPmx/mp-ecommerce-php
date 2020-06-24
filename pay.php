@@ -38,18 +38,18 @@ $preference->payment_methods = array(
 
 /* ARMO PERFIL DE COMPRADOR */
 $payer = new MercadoPago\Payer();
-$payer->id = 535650015;
+//$payer->id = 535650015;
 $payer->name = "Lalo";
 $payer->surname = "Landa";
 $payer->email = "test_user_58295862@testuser.com";
 $payer->phone = array(
-    "area_code" => "52",
+    "area_code" => "",
     "number" => "​55 4973 7300"
 );
 $payer->address = array(
     "street_name" => "Insurgentes Sur",
     "street_number" => 1602,
-    "zip_code" => "0394​0"
+    "zip_code" => "03940"
 );
 $preference->payer = $payer;
 
