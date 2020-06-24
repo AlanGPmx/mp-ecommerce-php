@@ -599,7 +599,7 @@ if (isset($_POST['title']) && isset($_POST['unit'])  && isset($_POST['price']) &
                                     </form>
                                     <!-- https://www.mercadopago.com.mx/checkout/v1/redirect/6c8b8cf7-4ea9-4018-b63c-c2cf7e84145f/fatal/?preference-id=491494389-60e8484c-923b-4439-bdda-e891fe65fe85&action=https%3A%2F%2Falangpmx-mp-ecommerce-php.herokuapp.com%2Fprocesar-pago&p=2b4259117d70a7df40eef90bfd23e8d0 
                                 
-                                    https://www.mercadopago.com.mx/checkout/v1/redirect/c1ba3caf-0257-47d9-a341-c6d869af781a/fatal/?preference-id=491494389-111aef52-fe8a-4e60-8573-5700e93fa0e0&action=https%3A%2F%2Falangpmx-mp-ecommerce-php.herokuapp.com%2Fprocesar-pago&p=2b4259117d70a7df40eef90bfd23e8d0-->
+                                    https://www.mercadopago.com.mx/checkout/v1/redirect/b6c02d9c-ff00-4353-ac0a-19cf086aa15f/fatal/?preference-id=491494389-fe8cafef-f153-46d6-9193-5de4d0f49961&action=https%3A%2F%2Falangpmx-mp-ecommerce-php.herokuapp.com%2Fprocesar-pago&p=2b4259117d70a7df40eef90bfd23e8d0 -->
                                     <br><br>
                                 </div>
                             </div>
