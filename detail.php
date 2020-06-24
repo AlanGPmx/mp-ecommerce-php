@@ -30,7 +30,7 @@ if (isset($_POST['title']) && isset($_POST['unit'])  && isset($_POST['price']) &
     $item->unit_price = $_POST['price'];
     $item->description = "Telefono Celular";
 
-
+    $preference->auto_return = $host."/Procesado";
     $preference->items = array($item);
     $preference->marketplace = "Tienda e-commerce";
     $preference->save();
@@ -591,7 +591,7 @@ if (isset($_POST['title']) && isset($_POST['unit'])  && isset($_POST['price']) &
                                         <script src="https://www.mercadopago.com.mx/integrations/v1/web-payment-checkout.js" data-preference-id="<?php echo $preference->id; ?>">
                                         </script>
                                     </form>
-                                    <?php echo $preference->id; ?>
+                                    <!-- https://www.mercadopago.com.mx/checkout/v1/redirect/6c8b8cf7-4ea9-4018-b63c-c2cf7e84145f/fatal/?preference-id=491494389-60e8484c-923b-4439-bdda-e891fe65fe85&action=https%3A%2F%2Falangpmx-mp-ecommerce-php.herokuapp.com%2Fprocesar-pago&p=2b4259117d70a7df40eef90bfd23e8d0 -->
                                     <br><br>
                                 </div>
                             </div>
