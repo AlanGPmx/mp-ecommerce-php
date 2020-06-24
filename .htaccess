@@ -1,8 +1,3 @@
-#Forzar a que todas las URL sean seguras con HTTPS
-RewriteEngine on
-RewriteCond %{HTTPS} !on
-RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI}
-
 #Evita que se vean los archivos de las carpetas donde no exista un documento index
 Options All -Indexes
 
