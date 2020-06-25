@@ -22,7 +22,6 @@
 
     <link rel="stylesheet" href="./assets/merch-tools.css" media="screen, print">
 
-    <link rel="stylesheet" href="./assets/fonts" media="">
     <style>
         .as-filter-button-text {
             font-size: 26px;
@@ -377,7 +376,7 @@
                                         <form action="<?php echo $host; ?>/detail.php" method="get">
                                             <input type="hidden" name="img" value="./assets/u_10168742.jpg">
                                             <input type="hidden" name="title" value="iPhone 8">
-                                            <input type="hidden" name="price" value="345000">
+                                            <input type="hidden" name="price" value="16000">
                                             <input type="hidden" name="unit" value="1">
                                             <button type="submit" class="mercadopago-button" formmethod="post">Comprar</button>
                                         </form>
